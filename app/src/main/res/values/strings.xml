@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HMI</string>
+    <string name="login_text">You will receive a 6 digit code to verify</string>
+    <string name="hint_size">Phone No</string>
+</resources>

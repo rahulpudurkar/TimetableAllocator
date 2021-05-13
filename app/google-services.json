@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "116550090659",
+    "firebase_url": "https://hmiproject-fac49-default-rtdb.firebaseio.com",
+    "project_id": "hmiproject-fac49",
+    "storage_bucket": "hmiproject-fac49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116550090659:android:e51d49ce010008b6406416",
+        "android_client_info": {
+          "package_name": "com.example.hmi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116550090659-ksudd55ej8hnmsccq6htgh4m48ujkmml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hmi",
+            "certificate_hash": "70472c77d4f55725a9c2e27ff8d96841b05d72de"
+          }
+        },
+        {
+          "client_id": "116550090659-lbl8dci1vhdhigc30n4bc5ft4u9lp7c2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuiWR90GwEFrNEp3yS3wNBy2p_ScWaQxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116550090659-lbl8dci1vhdhigc30n4bc5ft4u9lp7c2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
