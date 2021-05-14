@@ -7,15 +7,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.transition.Scene;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    ListView lvProgram;
+    String [] DepartmentName = {"COMPUTER","IT","EXTC","MECHANICAL"};
+    String [] DepartmentDesc = {"Department of Computer Engineering","Department of IT Engineering","Department of EXTC Engineering","Department of Mechanical Engineering"};
+    int[] DepartmentImages = {R.drawable.computer,R.drawable.it,R.drawable.extc,R.drawable.mechanical};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        lvProgram=findViewById(R.id.lvProgram);
+        ProgramAdapter programAdapter = new ProgramAdapter(this,DepartmentName,DepartmentImages,DepartmentDesc);
+        lvProgram.setAdapter(programAdapter);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.dashboard);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
