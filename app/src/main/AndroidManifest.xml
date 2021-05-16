@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Questions"></activity>
+        <activity android:name=".facultyinformation"></activity>
+        <activity android:name=".landingpage" />
+        <activity android:name=".Questions" />
         <activity android:name=".Teachers" />
         <activity android:name=".Standards" />
         <activity android:name=".SplashScreen">

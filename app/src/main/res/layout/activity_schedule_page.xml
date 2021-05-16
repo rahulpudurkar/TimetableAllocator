@@ -4,7 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
     tools:context=".SchedulePage">
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/schedule"
+        android:layout_width="350dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="Schedule Lectures"
+        android:textAlignment="center"
+        android:textColor="@color/color1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_back"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <com.example.hmi.Schedule
         android:id="@+id/custom_calendar_view"

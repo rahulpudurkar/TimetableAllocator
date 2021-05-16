@@ -18,6 +18,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/year"
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="Select Class"
+        android:textColor="@color/color1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_back"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
         android:id="@+id/FE"
         android:layout_width="347dp"
         android:layout_height="72dp"

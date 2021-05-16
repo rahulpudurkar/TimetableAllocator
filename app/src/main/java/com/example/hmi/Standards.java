@@ -42,7 +42,7 @@ public class Standards extends AppCompatActivity {
         be.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Teachers.class));
+                startActivity(new Intent(getApplicationContext(),landingpage.class));
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 
             }

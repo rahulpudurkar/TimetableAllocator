@@ -8,18 +8,22 @@
     tools:context=".SummaryPage">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="158dp"
-        android:textSize="50sp"
-        android:layout_marginBottom="356dp"
+        android:id="@+id/summaryheading"
+        android:layout_width="350dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center"
         android:text="Summary Page"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/color1"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
