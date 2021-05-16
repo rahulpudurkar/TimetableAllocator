@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".Questions">
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/q1"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/border_edit"
+        android:drawablePadding="10dp"
+        android:hint="Subject Name"
+        android:paddingLeft="10dp"
+        android:textColorHint="#5B60DA"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/q2"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_edit"
+        android:drawablePadding="10dp"
+        android:hint="Lecture Number"
+        android:paddingLeft="10dp"
+        android:textColorHint="#5B60DA"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q1" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/q3"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_edit"
+        android:drawablePadding="10dp"
+        android:hint="How much more Lectures Needed?"
+        android:paddingLeft="10dp"
+        android:textColorHint="#5B60DA"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q2" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/q4"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_edit"
+        android:drawablePadding="10dp"
+        android:hint="How much Portion Left?"
+        android:paddingLeft="10dp"
+        android:textColorHint="#5B60DA"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q3" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/q5"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_edit"
+        android:drawablePadding="10dp"
+        android:hint="Lecture Link"
+        android:paddingLeft="10dp"
+        android:textColorHint="#5B60DA"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q4" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/q6"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_edit"
+        android:drawablePadding="10dp"
+        android:hint="Attendance Link"
+        android:paddingLeft="10dp"
+        android:textColorHint="#5B60DA"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q5" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="146dp"
+        android:background="@drawable/rectanglebutton"
+        android:text="SUBMIT"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q6" />
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="146dp"
+        android:background="@drawable/rectanglebutton"
+        android:text="EDIT"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="146dp"
+        android:background="@drawable/rectanglebutton"
+        android:text="SAVE"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:background="#5B60DA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentBottom="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
