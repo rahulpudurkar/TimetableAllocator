@@ -73,7 +73,7 @@ public class Questions extends AppCompatActivity {
 
             }
         });
-        databaseReference.child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+/*        databaseReference.child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 HashMap<String,String> hash = new HashMap<>();
@@ -101,9 +101,9 @@ public class Questions extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Something went wrong please try again",LENGTH_SHORT).show();
 
             }
-        });
+        });*/
 
-        edit.setOnClickListener(new View.OnClickListener() {
+  /*      edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 save = (Button) findViewById(R.id.save);
@@ -128,9 +128,9 @@ public class Questions extends AppCompatActivity {
                 q6.setFocusable(false);
 
             }
-        });
+        });*/
 
-        save.setOnClickListener(new View.OnClickListener() {
+/*        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
@@ -198,7 +198,7 @@ public class Questions extends AppCompatActivity {
             }
 
 
-        });
+        });*/
 
 
         back_button.setOnClickListener(new View.OnClickListener() {
