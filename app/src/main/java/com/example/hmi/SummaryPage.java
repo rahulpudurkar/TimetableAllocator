@@ -25,10 +25,7 @@ public class SummaryPage extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.schedule:
-                        startActivity(new Intent(getApplicationContext(), SchedulePage.class));
-                        overridePendingTransition(0, 0);
-                        return true;
+
 
                     case R.id.summary:
                         startActivity(new Intent(getApplicationContext(), SummaryPage.class));

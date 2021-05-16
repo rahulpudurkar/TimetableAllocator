@@ -8,10 +8,6 @@
         android:id="@+id/dashboard"
         android:title="Dashboard"
         android:icon="@drawable/ic_baseline_dashboard_24"/>
-    <item
-        android:id="@+id/schedule"
-        android:title="Schedule"
-        android:icon="@drawable/ic_baseline_schedule_24"/>
 
 
 </menu>

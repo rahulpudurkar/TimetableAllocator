@@ -7,7 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.transition.Scene;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -34,10 +37,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.schedule:
-                        startActivity(new Intent(getApplicationContext(), SchedulePage.class));
-                        overridePendingTransition(0, 0);
-                        return true;
+
 
                     case R.id.summary:
                         startActivity(new Intent(getApplicationContext(), SummaryPage.class));
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

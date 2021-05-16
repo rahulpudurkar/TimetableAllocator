@@ -17,9 +17,9 @@ public class SchedulePage extends AppCompatActivity {
         setContentView(R.layout.activity_schedule_page);
 
         Schedule customCalendarView = new Schedule(this);
-        customCalendarView = findViewById(R.id.custom_calendar_view);
+        //customCalendarView = findViewById(R.id.custom_calendar_view);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+/*        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.schedule);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -29,11 +29,6 @@ public class SchedulePage extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.schedule:
-                        startActivity(new Intent(getApplicationContext(), SchedulePage.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-
                     case R.id.summary:
                         startActivity(new Intent(getApplicationContext(), SummaryPage.class));
                         overridePendingTransition(0, 0);
@@ -44,6 +39,6 @@ public class SchedulePage extends AppCompatActivity {
 
             }
 
-        });
+        });*/
     }
 }
