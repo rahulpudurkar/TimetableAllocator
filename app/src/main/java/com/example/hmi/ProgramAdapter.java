@@ -49,9 +49,11 @@ public class ProgramAdapter extends ArrayAdapter<String> {
         singleItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"You clicked "+DepartmentName[position],Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context.getApplicationContext(),Standards.class));
 
             }
+
+
         });
 
         return singleItem;

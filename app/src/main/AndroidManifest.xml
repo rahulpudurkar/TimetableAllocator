@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Standards"></activity>
+        <activity android:name=".Teachers"></activity>
+        <activity android:name=".Standards" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +35,7 @@
         </service>
 
         <activity android:name=".SignUp" />
-        <activity android:name=".phonenumber"></activity>
+        <activity android:name=".phonenumber" />
         <activity android:name=".OtpActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

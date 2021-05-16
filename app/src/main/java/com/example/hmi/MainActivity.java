@@ -9,24 +9,54 @@ import android.transition.Scene;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-    ListView lvProgram;
-    String [] DepartmentName = {"COMPUTER","IT","EXTC","MECHANICAL"};
-    String [] DepartmentDesc = {"Department of Computer Engineering","Department of IT Engineering","Department of EXTC Engineering","Department of Mechanical Engineering"};
-    int[] DepartmentImages = {R.drawable.computer,R.drawable.it,R.drawable.extc,R.drawable.mechanical};
+    //ListView lvProgram;
+    FirebaseAuth fAuth;
+    private Button logout;
+    TextView comps;
+
+   // String [] DepartmentName = {"COMPUTER","IT","EXTC","MECHANICAL"};
+    //String [] DepartmentDesc = {"Department of Computer Engineering","Department of IT Engineering","Department of EXTC Engineering","Department of Mechanical Engineering"};
+    //int[] DepartmentImages = {R.drawable.computer,R.drawable.it,R.drawable.extc,R.drawable.mechanical};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        lvProgram=findViewById(R.id.lvProgram);
-        ProgramAdapter programAdapter = new ProgramAdapter(this,DepartmentName,DepartmentImages,DepartmentDesc);
-        lvProgram.setAdapter(programAdapter);
+        //lvProgram=findViewById(R.id.lvProgram);
+        //ProgramAdapter programAdapter = new ProgramAdapter(this,DepartmentName,DepartmentImages,DepartmentDesc);
+        fAuth = FirebaseAuth.getInstance();
+
+        logout = (Button)findViewById(R.id.logout_button);
+        comps =  (TextView) findViewById(R.id.FE);
+
+        comps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Standards.class));
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fAuth.signOut();
+                finish();
+                startActivity(new Intent(getApplicationContext(),phonenumber.class));
+
+            }
+        });
+        //lvProgram.setAdapter(programAdapter);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.dashboard);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -35,18 +65,14 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.dashboard:
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        overridePendingTransition(0, 0);
+                        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                         return true;
-
-
                     case R.id.summary:
                         startActivity(new Intent(getApplicationContext(), SummaryPage.class));
-                        overridePendingTransition(0, 0);
+                        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                         return true;
-
                 }
                 return false;
-
             }
 
         });

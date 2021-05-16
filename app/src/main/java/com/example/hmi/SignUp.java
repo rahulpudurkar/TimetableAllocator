@@ -18,11 +18,11 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SignUp extends AppCompatActivity {
 
     EditText edit_name;
-    EditText edit_phone;
+    EditText edit_phone, edit_subject;
     DatabaseReference databaseReference;
     Button ButtonSignUp, back_button;
     String phoneNum;
-    String name;
+    String name,subject;
     Java_SignUp java_signUp;
     long maxid = 0;
     String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -34,6 +34,7 @@ public class SignUp extends AppCompatActivity {
 
         edit_name = findViewById(R.id.edit_name);
         edit_phone = findViewById(R.id.edit_phone);
+        edit_subject= findViewById(R.id.edit_subject);
         ButtonSignUp = findViewById(R.id.buttonSignUp);
         back_button = findViewById(R.id.back_button);
 
@@ -61,9 +62,11 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View view) {
 
                 name = edit_name.getText().toString();
+                subject = edit_subject.getText().toString();
                 phoneNum = edit_phone.getText().toString().trim();
 
-                Java_SignUp n = new Java_SignUp(name, phoneNum);
+
+                Java_SignUp n = new Java_SignUp(name,subject, phoneNum);
 
                 databaseReference.child(uid).setValue(n);
                 Toast.makeText(getApplicationContext(), "Data inserted Successfully", Toast.LENGTH_LONG).show();

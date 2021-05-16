@@ -31,7 +31,7 @@
         android:background="@drawable/border_edit"
         android:drawableLeft="@drawable/customer"
         android:drawablePadding="10dp"
-        android:hint="Full Name"
+        android:hint="Faculty Name"
         android:paddingLeft="10dp"
         android:textColorHint="#5B60DA"
         android:textSize="25dp"
@@ -40,11 +40,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+
+    <EditText
+        android:id="@+id/edit_subject"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_edit"
+        android:drawableLeft="@drawable/customer"
+        android:drawablePadding="10dp"
+        android:hint="Subject Name"
+        android:paddingLeft="10dp"
+        android:textColorHint="#5B60DA"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
     <EditText
         android:id="@+id/edit_phone"
         android:layout_width="330dp"
         android:layout_height="56dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/border_edit"
         android:drawableLeft="@drawable/image"
         android:drawablePadding="10dp"
@@ -53,16 +71,15 @@
         android:textColorHint="#5B60DA"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
-
+        app:layout_constraintTop_toBottomOf="@+id/edit_subject" />
 
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="258dp"
         android:layout_height="53dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/custom_button"
         android:text="Let's Start"
         android:textAllCaps="false"
@@ -77,17 +94,16 @@
         android:id="@+id/textView7"
         android:layout_width="300dp"
         android:layout_height="0dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="56dp"
+        android:gravity="center_horizontal"
         android:text="By continuing you agree to the Terms of Services and Privacy Policy"
         android:textAlignment="center"
         android:textColor="#5B60DA"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_phone"
-        android:layout_marginRight="56dp"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_phone" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
