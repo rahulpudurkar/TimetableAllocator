@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -64,6 +65,7 @@ public class Schedule extends LinearLayout implements AdapterView.OnItemSelected
     Boolean itemSelected = false;
     Boolean assigned = false;
     String[] staffDataList;
+    HashMap<String,String> staffMap = new HashMap<>();
 
     public Schedule(Context context) {
         super(context);
@@ -185,8 +187,10 @@ public class Schedule extends LinearLayout implements AdapterView.OnItemSelected
                 }
 
                 staffDataList = new String[arrayList.size()];
-                for (i = 0; i < arrayList.size(); i++)
+                for (i = 0; i < arrayList.size(); i++) {
                     staffDataList[i] = arrayList.get(i).getNAME();
+                    staffMap.put(staffDataList[i], arrayList.get(i).getSUBJECT());
+                }
                 progressBar.setVisibility(GONE);
                 SetUpCalendar();
             }
@@ -203,11 +207,11 @@ public class Schedule extends LinearLayout implements AdapterView.OnItemSelected
         staffAssignList.clear();
         int k = 0;
 
-        for (int i = 0; i < staffDataList.length; i++) {
+        for (String s : staffDataList) {
             if (k >= shiftsArrayString.length)
                 break;
 
-            Users user = new Users(staffDataList[i], shiftsArrayString[k], "Comps", date);
+            Users user = new Users(s, shiftsArrayString[k], staffMap.get(s), date);
             staffAssignList.add(user);
             k++;
         }
@@ -235,10 +239,10 @@ public class Schedule extends LinearLayout implements AdapterView.OnItemSelected
                         for (DataSnapshot ds : d.getChildren()) {
                             String name = ds.child("name").getValue(String.class);
                             String shift = ds.child("shift").getValue(String.class);
-                            String designation = ds.child("designation").getValue(String.class);
+                            String subject = ds.child("subject").getValue(String.class);
                             String date = ds.child("date").getValue(String.class);
 
-                            Users user = new Users(name, shift, designation, date);
+                            Users user = new Users(name, shift, subject, date);
 
                             assigned = true;
                             arrayList.add(user);

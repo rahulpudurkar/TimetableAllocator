@@ -47,11 +47,9 @@ public class EventsRecyclerAdapter extends RecyclerView.Adapter<EventsRecyclerAd
         final Users user = arrayList.get(position);
         holder.Event.setText(user.getNAME());
         holder.Shift.setText(user.getSHIFT());
-        if(arrayList.get(position).getSHIFT().equals("Off"))
-        {
-            holder.Event.setTextColor(context.getColor(R.color.red));
-            holder.Shift.setTextColor(context.getColor(R.color.red));
-        }
+        holder.Subject.setText(user.getSUBJECT());
+
+
         holder.SwapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,16 +64,37 @@ public class EventsRecyclerAdapter extends RecyclerView.Adapter<EventsRecyclerAd
                         FirebaseDatabase.getInstance().getReference("schedule").child(user.getDATE()).child(String.valueOf(position)).child("name").setValue(user.getNAME());
                     }
 
+
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
                 });
                 notifyDataSetChanged();
+
+                ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String subjectName = dataSnapshot.child("subject").getValue(String.class);
+                        arrayList.get(position).setSUBJECT(subjectName);
+                        FirebaseDatabase.getInstance().getReference("schedule").child(user.getDATE()).child(String.valueOf(position)).child("subject").setValue(user.getSUBJECT());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                notifyDataSetChanged();
+
             }
+
+
         });
         //holder.DateText.setText(user.getDATE());
         holder.Event.setText(user.getNAME());
+        holder.Subject.setText(user.getSUBJECT());
     }
 
     @Override
@@ -85,7 +104,7 @@ public class EventsRecyclerAdapter extends RecyclerView.Adapter<EventsRecyclerAd
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView DateText, Event, Shift;
+        TextView DateText, Event, Shift, Subject;
         Button SwapBtn;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -94,6 +113,7 @@ public class EventsRecyclerAdapter extends RecyclerView.Adapter<EventsRecyclerAd
             //DateText = itemView.findViewById(R.id.eventDate);
             Event = itemView.findViewById(R.id.eventName);
             Shift = itemView.findViewById(R.id.shiftName);
+            Subject = itemView.findViewById(R.id.subjectName);
             SwapBtn = itemView.findViewById(R.id.swapBtn);
         }
     }

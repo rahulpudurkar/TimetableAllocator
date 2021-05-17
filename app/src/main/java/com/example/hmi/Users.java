@@ -4,7 +4,7 @@ public class Users {
 
     private String NAME;
     private String EMAIL;
-    private String DESIGNATION;
+    private String SUBJECT;
     private String SHIFT;
     private String DATE;
 
@@ -21,16 +21,16 @@ public class Users {
         this.SHIFT = SHIFT;
     }
 
-    public Users(String NAME, String EMAIL, String DESIGNATION) {
+    public Users(String NAME, String EMAIL, String SUBJECT) {
         this.NAME = NAME;
         this.EMAIL = EMAIL;
-        this.DESIGNATION = DESIGNATION;
+        this.SUBJECT = SUBJECT;
     }
 
-    public Users(String NAME, String SHIFT, String DESIGNATION,String DATE) {
+    public Users(String NAME, String SHIFT, String SUBJECT,String DATE) {
         this.NAME = NAME;
         this.SHIFT = SHIFT;
-        this.DESIGNATION = DESIGNATION;
+        this.SUBJECT = SUBJECT;
         this.DATE = DATE;
     }
 
@@ -58,12 +58,12 @@ public class Users {
         this.EMAIL = EMAIL;
     }
 
-    public String getDESIGNATION() {
-        return DESIGNATION;
+    public String getSUBJECT() {
+        return SUBJECT;
     }
 
-    public void setDESIGNATION(String DESIGNATION) {
-        this.DESIGNATION = DESIGNATION;
+    public void setSUBJECT(String SUBJECT) {
+        this.SUBJECT = SUBJECT;
     }
 
     public String getSHIFT() {
