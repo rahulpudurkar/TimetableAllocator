@@ -33,14 +33,25 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/schedule_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/color1"
+        android:text="Click on a date to see the schedule"
+        app:layout_constraintTop_toBottomOf="@+id/schedule"
+        app:layout_constraintBottom_toTopOf="@+id/custom_calendar_view"/>
+
     <com.example.hmi.Schedule
         android:id="@+id/custom_calendar_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/schedule_hint">
 
     </com.example.hmi.Schedule>
 
