@@ -29,7 +29,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="60dp"
         android:gravity="center"
-        android:text="Select Department Name"
+        android:text="Select Department"
         android:textAlignment="center"
         android:textColor="@color/color1"
         android:textSize="27sp"
