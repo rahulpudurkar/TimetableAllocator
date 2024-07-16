@@ -2,7 +2,7 @@
 
 Welcome to the Timetable Allocator project! This repository contains the code for an efficient and user-friendly timetable allocation system designed for Android devices. This project helps educational institutions manage and allocate timetables seamlessly by leveraging advanced algorithms to ensure optimal distribution of classes and resources.
 
-![Timetable Allocator](Thumbnail.png)
+<img src="Thumbnail.png" alt="Timetable Allocator" width="200" height="200">
 
 ## Table of Contents
 - [Overview](#overview)
