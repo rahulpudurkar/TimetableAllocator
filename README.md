@@ -1,6 +1,10 @@
+Sure! Here is the updated README file with the second image included:
+
 # Timetable Allocator
 
 Welcome to the Timetable Allocator project! This repository contains the code for an efficient and user-friendly timetable allocation system designed for Android devices. This project helps educational institutions manage and allocate timetables seamlessly by leveraging advanced algorithms to ensure optimal distribution of classes and resources.
+
+![Timetable Allocator](file-1wc1kZgeTkVMxS7aU3pFMgAK)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -93,7 +97,7 @@ Please ensure your code follows the project's coding standards and includes appr
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE] file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
